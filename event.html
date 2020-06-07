@@ -10,8 +10,27 @@
     <header>
 
     </header>
-    <main>
+    <main id = "main">
+        <button id = 'CreateEvent' >Create Event</button>
+        <form action="" id = 'CreateEventForm'>
+            <legend>Create Event</legend>
+            <label for="eventName">Event Name</label>
+            <input id = eventName type = "text"><br>
+            <label for="description">Description</label>
+            <input id = description type = "text"><br>
+            <label for="image">Image</label>
+            <input id = image type = "text" placeholder="Image URL"><br>
+            <label for="date">Date</label>
+            <input id = date type = "text"><br>
+            <label for="numberofpeople">Number of People</label>
+            <input id = numberofpeople type = "text"><br>
+            <label for="requirments">Requirements</label>
+            <input id = requirments type = "text"><br>
+
+            <input type="submit">
+        </form>
         <div id="events-div"></div>
+
     </main>
     <footer>
 

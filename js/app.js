@@ -327,4 +327,17 @@ function eventRender() {
 }
 
 
+document.getElementById('createEventForm').addEventListener('submit', handleEventForm);
+function handleEventForm(event){
+   let eventName= event.target.eventName.value;
+   let description = event.target.description.value;
+   let imageURL = event.target.imageURL.value;
+   let date = event.target.date.value;
+   let numberOfPeople = event.target.numberOfPeople.value;
+   let requirements = event.target.requirements.value;
+   Account.all[currUserID].createEvent(eventName,description,imageURL,date,numberOfPeople,requirements);
+   console.log(eventName,description,imageURL,date,numberOfPeople,requirements);
+}
+
 /////Events Part End//////
+
