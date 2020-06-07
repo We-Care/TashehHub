@@ -6,11 +6,11 @@
 
 # TashehHub Wireframes 
 ### Home Page  :
- ![Home Page ](https://github.com/AhmadKheder/Test/blob/master/Tasheeh%20wireframes/Home%20Page.png)
+ ![Home Page ](https://github.com/We-Care/TashehHub/blob/master/wirframes/Home%20Page.png)
  ### Events  :
- ![Events ](https://github.com/AhmadKheder/Test/blob/master/Tasheeh%20wireframes/Events.png)
+ ![Events ](https://github.com/We-Care/TashehHub/blob/master/wirframes/Events.png)
   ### About us  :
- ![About us ](https://github.com/AhmadKheder/Test/blob/master/Tasheeh%20wireframes/About%20us.png)
+ ![About us ](https://github.com/We-Care/TashehHub/blob/master/wirframes/About%20us.png)
 
 
 ## User Story
