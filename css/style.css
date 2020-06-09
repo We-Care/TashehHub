@@ -1,5 +1,44 @@
 
-    /* <!--------------------- Ahmad-Start-------------------------->  */
+iframe{
+    /* border: red solid 5px; */
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 300px;
+    box-shadow: 15px 15px gray;
+}
+.social{
+display: inline-block;
+height: 50px;
+width: 50px;
+}
+.img1{
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    margin-left: 150px;
+    /* margin-right: 100px; */
+}
+div .footer-section1-map{
+    display: inline-block;
+
+}
+.footer-section1{
+    display: inline-block;
+}
+.footer-bottom{
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+.find{
+    margin-bottom: 10px;
+    font-size: xx-large;
+    color: black;
+    margin-left: 150px;
+}
+	/* <!--------------------- Ahmad-Start-------------------------->  */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
