@@ -1,18 +1,10 @@
- /* @keyframes lighting {
-    from {
-      box-shadow: 0 0 2px -2px #f3f3f3;
-    }
-    to {
-      box-shadow: 0 0 2px 2px #f3f3f3;
-    }
-  } */
-  body{
+/* <!--------------------- Ibrahim-Start--------------------------> */
+
+body{
     margin:0 auto;
     background-image: url('https://cdn.inspirationhut.net/wp-content/uploads/2013/05/21.png');
     background-repeat: no-repeat;
     background-size: cover;
-
-
   }
   @keyframes lighting {
     from {
@@ -23,7 +15,22 @@
         text-shadow: 0 0 20px rgb(1, 1, 1), 0 0 20px rgba(1, 1, 1, 0.6), 0 0 10px rgba(1, 1, 1, 0.6), 0 0 30px rgba(1, 1, 1, 0.6), 0 0 30px rgba(1, 1, 1, 0.6), 0 0 20px rgba(1, 1, 1, 0.6), 0 0 40px rgba(7, 7, 7, 0.6);
       }
   }
+  /* @keyframes flash {
+    from {
+      box-shadow: 0 0 2px -2px #f3f3f3;
+    }
+    to {
+      box-shadow: 0 0 2px 2px #f3f3f3;
+    }
+  } */
+  /* animation: flash 1s infinite alternate; */
 /* header{
+     overflow: hidden;
+    display: inline-block;
+    margin: 20px 0 0 40px;
+    padding: 13px 40px;
+    border-left: 1px #404040 solid;
+    z-index: 9999;
     display: inline-block;
     color: #000;
     font-weight: lighter;
@@ -41,70 +48,48 @@
     animation: lighting 1s ease-in-out infinite alternate;
     box-shadow:  0 0 10px 10px rgba(192, 192, 212, 0.589);
 } */
-/* @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px gray, 0 0 10px gray, 0 0 10px gray, 0 0 10px gray, 0 0 10px gray;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 20px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.6);
-    }
-  } */
-
-
-
-
-/* strart h2 */
-
-
-
 /* flip  box */
-
 .square-flip{
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
     -ms-perspective: 1000;
     perspective: 1000;
-
     -webkit-transform: perspective(1000px);
     -moz-transform: perspective(1000px);
     -ms-transform: perspective(1000px);
     transform: perspective(1000px);
-
     -webkit-transform-style: preserve-3d; 
     -moz-transform-style: preserve-3d; 
     -ms-transform-style: preserve-3d; 
     transform-style: preserve-3d; 
-
     /*border:1px solid #efefef;*/
     
     position:relative;
     float:left;
     margin:20px;
-
     }
     .square-flip{
+        margin: 120px;
         width:400px;
         height:400px;
+        box-shadow: 0 4px 8px 0 rgba(233, 14, 14, 0.4), 0 6px 20px 0 rgba(245, 9, 9, 0.4);
+        box-shadow: 15px 15px 5px grey;
+        /* animation: lighting 1s ease-in-out infinite alternate; */
+        /* margin-top: 100px; */
     }
     .square,.square2{
         width:100%;
         height:100%;
     }
     .square{
-
         background-size: cover;
         background-position:center center;
-
         -ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
         overflow: hidden;
-
         position:absolute;
         top:0;
-
-
         -webkit-backface-visibility: hidden; 
         backface-visibility: hidden;
     }
@@ -125,21 +110,15 @@
         transform: rotateY(-180deg);
         transform-style: preserve-3d;
     }
-
-
     .square2{
-
         background-size: cover;
         background-position:center center;
-
         -ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
         overflow: hidden;
-
         position:absolute;
         top:0;
-
         -webkit-backface-visibility: hidden; 
         backface-visibility: hidden;
     }
@@ -160,18 +139,15 @@
         transform: rotateY(0deg);
         transform-style: preserve-3d;
     }
-
     /*Square content*/
     .square-container{
         padding:40px;
         text-align:center;
         position:relative;
         top:50%;
-
         -ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
-
     
         -webkit-transform: translateY(-50%) translateX(0px)  scale(1);
         -ms-transform: translateY(-50%) translateX(0px)  scale(1);
@@ -180,42 +156,32 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         z-index:2;
     }
     .square-flip:hover .square-container{
-        
         -webkit-transform: translateY(-50%) translateX(-650px)  scale(.88);
         -ms-transform: translateY(-50%) translateX(-650px)  scale(.88);
   transform: translateY(-50%) translateX(-650px)  scale(.88);
         transform-style: preserve-3d;
-
     }
-
     .square-container2{
         padding:40px;
         text-align:center;
         position:relative;
         top:50%;
-
         -ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
             -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
-
         
         -webkit-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
         -ms-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
   transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
-
         transform-style: preserve-3d;
         z-index:2;
     }
     .square-flip:hover .square-container2{
-        
         -webkit-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
         -ms-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
         transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
   transform-style: preserve-3d;
     }
-
-
-
     /*Style text*/
     .square-flip h2{
         color:red;
@@ -246,25 +212,21 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         margin:0 auto;
         background-image: url('https://avatars2.githubusercontent.com/u/57448850?s=460&u=3debe8d95b5c1b8cbb28f4ad524edd7aabc94e08&v=4');
         background-repeat: no-repeat;
-
     }
     #back2{
         margin:0 auto;
         background-image: url('https://ca.slack-edge.com/TNGRRLUMA-UTE6CC9NU-76521ca94c33-512');
         background-repeat: no-repeat;
-
     }
     #back3{
         margin:0 auto;
         background-image: url('https://avatars1.githubusercontent.com/u/54719438?s=400&u=7574861f4f147386966da6c8e06059252adfa64d&v=4');
         background-repeat: no-repeat;
-
     }
     #back4{
         margin:0 auto;
         background-image: url('https://ca.slack-edge.com/TNGRRLUMA-U011NPH83AR-5f26e4e9c971-512');
         background-repeat: no-repeat;
-
     }
     .kallyas-button{
         display:block;
@@ -277,7 +239,6 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         margin:0 auto;
         border-radius:2px;
         text-decoration:none;
-
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa067+0,ff2959+49,ff2024+100 */
         background: #ffa067; /* Old browsers */
         background: -moz-linear-gradient(-45deg,  #ffa067 0%, #ff2959 49%, #ff2024 100%); /* FF3.6-15 */
@@ -285,74 +246,88 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         background: linear-gradient(135deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa067', endColorstr='#ff2024',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
-
-
-    /*ADD SHADOWS OPTIONAL*/
-    .square-flip .square .boxshadow, .square-flip .square .textshadow, .square-flip .square2 .boxshadow, .square-flip .square2 .textshadow{
-        -ms-transition: 0.60s;
-            transition: 0.60s;
-            -webkit-transition: 0.60s;
-    }
-
-    .square-flip .square .boxshadow{
-        -webkit-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-        -moz-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-        box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-    }
-    .square-flip .square .textshadow{
-        -webkit-text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-        -moz-text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-        text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-    }
-    .square-flip:hover .square .boxshadow, .square-flip:hover .square .textshadow{
-        -webkit-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-        -moz-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-        box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-    }
-
-
-    .square-flip .square2 .boxshadow{
-        -webkit-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-        -moz-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-        box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-    }
-    .square-flip .square2 .textshadow{
-        -webkit-text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-        -moz-text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-        text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
-
-    }
-    .square-flip:hover .square2 .boxshadow, .square-flip:hover .square2 .textshadow{
-        -webkit-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-        -moz-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-        box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
-    }
-
-    
-    /*You can delete this style*/
-    .centerflipcards{
-  display:block;
-        width:auto;
-  height:440px;
-        /* text-align:center; */
-        /* margin:0 auto; */
-        /* margin-top:25px; */
-    }
-.clearfix{clear:both;}
-.centerflipcards p{
-  font-family:"Open Sans";
-  font-size:13px;
-  margin-top:10px;
-  font-weight:700;
-}
+  
 .textdiv h2{
     background-color:rgb(172, 130, 130);
     width: 75%;
     animation: lighting 1s ease-in-out infinite alternate;
     text-align: center;
+}
+footer{
+    margin-top: 1300px;
+    border: 10px solid beige;
+    /* text-align: center; */
+}
+article section div h2{
+    font-size: 50px;
+    font-weight: 900;
+    display: inline-block;
+    color: red;
+    text-align: center;
+    animation: lighting 1s ease-in-out infinite alternate;
+    box-shadow: skyblue;
+    /* border: solid 5px; */
+    margin-left: 40%;
+}
+article section div p{
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    /* border: red solid 5px; */
+    color: black;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
 
 }
-#footer{
-    margin-top: 1500px;
+.bio{
+    font-size: x-large;
+    color: black;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+
+}
+/* div .footer-section1-map{
+    display: inline-block;
+} */
+iframe{
+    /* border: red solid 5px; */
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-left: 300px;
+    box-shadow: 15px 15px gray;
+}
+.social{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+main{
+    border: beige solid 10px;
+}
+.img1{
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    margin-left: 150px;
+    /* margin-right: 100px; */
+}
+div .footer-section1-map{
+    display: inline-block;
+
+}
+.footer-section1{
+    display: inline-block;
+}
+.footer-bottom{
+    padding: 20px;
+    color: black;
     text-align: center;
 }
+.find{
+    margin-bottom: 10px;
+    font-size: xx-large;
+    color: black;
+    margin-left: 150px;
+}
+
+/* <!--------------------- Ibrahim-End--------------------------> */
