@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TashehHub</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/event.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><button>HomePage</button></a>
+        <a href="event.html"><button>Events</button></a>
+        <a href="about.html"><button>AboutUS</button></a>
+        <button class="blured" id="inOutUp">Log out </button>
+
+    </header>
+    <main id="main">
+        <button id="exploreEventsButton">Explore Events</button>
+        <button id="myEventsButton">My Events</button>
+        <button id="followedEventsButton">Followed Events</button>
+
+        <button id="createEventBtn">create </button>
+
+        <div id="followedEvents">
+
+
+        </div>
+        <div id="exploreEvents">
+
+        </div>
+        <div id="myEvents">            </div>
+
+            <div id="events-div"></div>
+            <div id="createEventForm" class="createEventFormClass" style="display: none;">
+                <div class="container">
+                    <!-- <div class="form-container"> -->
+                    <form action="#" id="createEventForm">
+                        <legend>Create Event</legend>
+                        <label for="eventName">Event Name</label>
+                        <input id=eventName type="text" name="eventName" required><br> <label
+                            for="description">Description</label>
+                        <input id=description type="text" name="description" required><br> <label
+                            for="image">Image</label>
+                        <input id=image type="text" placeholder="Image URL" name="imageURL"><br> <label
+                            for="date">Date</label>
+                        <input id=date type="datetime" name="date" required><br> <label for="maxNumberOfPeople">Maximum
+                            Number of People</label>
+                        <input id="maxNumberOfPeople" type="text" name="maxNumberOfPeople" required><br> <label
+                            for="requirements">Requirements</label>
+                        <input id=requirements type="text" name="requirements" required><br>
+                        <button>Create</button>
+                    </form>
+                </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>

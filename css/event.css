@@ -1,0 +1,68 @@
+/* <!--------------------- Ahmad-Start-------------------------->  */
+
+/* form styling for events */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');* {
+    box-sizing: border-box;
+}
+#createEventForm{
+    background-color: darkgray;
+}
+.createEventFormClass {
+    background: #F6F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;}
+ #createEventForm{
+     position: fixed;
+     background-color:red;
+     width: 30%;
+     height: 90%;
+     left: 35%;
+     top: 5%;
+     z-index: 2;
+ } #createEventForm button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B
+;
+    background-color: #FF4B2B
+;
+    color: #FFFFFF
+;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}#createEventForm form {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+    /* width: 100%;
+    height: 100%; */
+}#createEventForm input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}.container{
+    background-color: royalblue;
+    width: 100%;
+    height: 100%;
+}.upperDivClass{
+    position: fixed;
+    background-color:black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+/* <!--------------------- Ahmad-Start-------------------------->  */
