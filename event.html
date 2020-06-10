@@ -6,17 +6,45 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/event2.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
+    
+        <div class="w3-top w3-hide-small w3-hover-black">
+            <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+                <a href="index.html" class="w3-bar-item w3-button ">HOME</a>
+                <a href="event.html" id="eventsButtonHome" class="w3-bar-item w3-button ">Events</a>
+                <a href="about.html" class="w3-bar-item w3-button ">ABOUT</a>
+                <a id="inOutUp" class="w3-bar-item w3-button ">Log Out</a>
+                
+                <a href="#" id="myEventsButton" class="w3-bar-item w3-button ">My Events</a>
+                <a href="#" id="followedEventsButton" class="w3-bar-item w3-button ">Followed Events</a>
+                <a href="#" id="exploreEventsButton" class="w3-bar-item w3-button ">Explore Events</a>
+
+            </div>
+        </div>
+
+        <!-- Header with image -->
+        <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+            <div class="w3-display-bottomleft w3-padding">
+                <span class="w3-tag w3-xlarge">TEXT</span>
+            </div>
+            <div class="w3-display-middle w3-center">
+                <span class="w3-text-white w3-hide-small" style="font-size:100px">Events<br>TasheehHub</span>
+                <!-- <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST
+                        PIZZA</b></span> -->
+                <p><a href="#" id="createEventBtn" class="w3-button w3-xxlarge w3-black">Create Event</a></p>
+            </div>
+        </header>
+        <div id="enventCards"></div>
+        <!-- <header>
         <a href="index.html"><button>HomePage</button></a>
         <a href="event.html"><button>Events</button></a>
         <a href="about.html"><button>AboutUS</button></a>
         <button class="blured" id="inOutUp">Log out </button>
-
-    </header>
+s
     <main id="main">
         <button id="exploreEventsButton">Explore Events</button>
         <button id="myEventsButton">My Events</button>
@@ -29,37 +57,121 @@
 
         </div>
         <div id="exploreEvents">
-
+           
         </div>
-        <div id="myEvents">            </div>
+        <div id="myEvents">  
+                      </div>
 
-            <div id="events-div"></div>
-            <div id="createEventForm" class="createEventFormClass" style="display: none;">
-                <div class="container">
-                    <!-- <div class="form-container"> -->
-                    <form action="#" id="createEventForm">
-                        <legend>Create Event</legend>
-                        <label for="eventName">Event Name</label>
-                        <input id=eventName type="text" name="eventName" required><br> <label
-                            for="description">Description</label>
-                        <input id=description type="text" name="description" required><br> <label
-                            for="image">Image</label>
-                        <input id=image type="text" placeholder="Image URL" name="imageURL"><br> <label
-                            for="date">Date</label>
-                        <input id=date type="datetime" name="date" required><br> <label for="maxNumberOfPeople">Maximum
-                            Number of People</label>
-                        <input id="maxNumberOfPeople" type="text" name="maxNumberOfPeople" required><br> <label
-                            for="requirements">Requirements</label>
-                        <input id=requirements type="text" name="requirements" required><br>
-                        <button>Create</button>
-                    </form>
+    </main> -->
+        <!--------------------- Ibrahim-start-footer-------------------------->
+        <div id="myEvents"> </div>        <div id="events-div"></div>
+        <div id="createEventForm" class="createEventFormClass" style="display: none;">
+            <!-- <div class="container"> -->
+            <!-- <div class="form-container"> -->
+            <form action="#" id="createEventForm">
+                <legend>
+                    <h1>Create Event</h1>
+                </legend>
+                <label for="eventName" class="label">Event Name</label>
+                <input id=eventName type="text" name="eventName" required><br> <label class="label"
+                    for="description">Description</label>
+                <input id=description type="text" name="description" required><br> <label class="label"
+                    for="image">Image</label>
+                <input id=image type="text" placeholder="Image URL" name="imageURL"><br> <label class="label"
+                    for="date">Date</label>
+                <input id=date type="datetime" name="date" required><br> <label class="label"
+                    for="maxNumberOfPeople">Maximum
+                    Number of People</label>
+                <input id="maxNumberOfPeople" type="text" name="maxNumberOfPeople" required><br> <label class="label"
+                    for="requirements">Requirements</label>
+                <input id=requirements type="text" name="requirements" required><br>
+                <button>Create</button>
+            </form>
+        </div>
+        <footer>
+
+
+
+            <div class="footer-content">
+
+                <div class="footer-section1">
+
+                    <h1 class="footh1">TeshehHub</h1>
+
+                    <p>
+
+                        Please contact us for any further assistance.
+
+                    </p>
+
+                    <div class="contact">
+
+                        <p> +962-7852-8562-29</p>
+
+                        <p> &nbsp; info@WE-CARE.com</p>
+
+                    </div>
+
+                    <div>
+
+                        <a class="b" href="https://facebook.com"><img class="social"
+                                src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_1-facebook-512.png"
+                                alt=""></a>
+
+                        <a class="b" href="https://twitter.com"><img class="social"
+                                src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_6-twitter-512.png"
+                                alt=""></a>
+
+                        <a class="b" href="https://youtube.com"><img class="social"
+                                src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_2-youtube-512.png"
+                                alt=""></a>
+
+                    </div>
+
                 </div>
-    </main>
-    <footer>
 
-    </footer>
-    <script src="js/app.js"></script>
-    <script src="js/events.js"></script>
+                <div class="footer-section1-map">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.319914211971!2d35.8663810146408!3d31.897904135594967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca6e3c8e41335%3A0x38b7f4b7f0dc25d0!2sLuminus%20College!5e0!3m2!1sen!2sjo!4v1587282960933!5m2!1sen!2sjo"
+                        width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+
+                </div>
+
+                <div class="footer-section1">
+
+                    <h1 class="find">You can find us on</h1>
+
+                    <div class="apps">
+
+                        <a href=""><img class="img1"
+                                src="https://3.bp.blogspot.com/-zxXOgeQ5-0A/XD5vwB4CtTI/AAAAAAAAG4c/fFMrXH-ZFZkkVlzkgB6dvRJMUwfDgACWACK4BGAYYCw/s640/Icons%2BApp%2BStore%2BGoogle%2Bplay.png"
+                                alt="app store">
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                &copy; 2020 WE-CARE.com <a class="terms" href="#"> &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp; Terms and Conditions
+                </a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a class="terms" href="#">Privacy Policy</a>
+    
+            </div>
+
+        </footer>
+
+
+        <!--------------------- Ibrahim-End-footer-------------------------->
+
+        <script src="js/app.js"></script>
+        <script src="js/events.js"></script>
 </body>
 
 </html>

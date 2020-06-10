@@ -17,6 +17,7 @@ function logout() {
     let buttonE = document.getElementById('inOutUp');
     buttonE.innerText = 'Log out';
     buttonE.addEventListener('click', function (event) {
+        console.log('good');
         localStorage.removeItem('currUserID');
         window.location.href = 'index.html';
         

@@ -1,18 +1,17 @@
-/* <!--------------------- Ibrahim-Start--------------------------> */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nothing+You+Could+Do&display=swap');
+/* font-family: 'Fredoka One', cursive;
 
-body{
-    margin:0 auto;
-    background-image: url('https://cdn.inspirationhut.net/wp-content/uploads/2013/05/21.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+font-family: 'Nothing You Could Do', cursive; */
+/* <!--------------------- Ibrahim-Start--------------------------> */
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
   @keyframes lighting {
     from {
-        text-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px gray, 0 0 10px gray, 0 0 10px gray, 0 0 10px gray, 0 0 10px gray;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.411), 0 0 20px rgba(0, 0, 0, 0.411), 0 0 30px rgba(0, 0, 0, 0.411), 0 0 10px rgba(0, 0, 0, 0.411), 0 0 10px rgba(0, 0, 0, 0.411), 0 0 10px rgba(0, 0, 0, 0.411), 0 0 10px rgba(0, 0, 0, 0.411);
       }
       
       to {
-        text-shadow: 0 0 20px rgb(1, 1, 1), 0 0 20px rgba(1, 1, 1, 0.6), 0 0 10px rgba(1, 1, 1, 0.6), 0 0 30px rgba(1, 1, 1, 0.6), 0 0 30px rgba(1, 1, 1, 0.6), 0 0 20px rgba(1, 1, 1, 0.6), 0 0 40px rgba(7, 7, 7, 0.6);
+        text-shadow: 0 0 20px white;
       }
   }
   /* @keyframes flash {
@@ -44,7 +43,7 @@ body{
     font-family: 'Open Sans Condensed', sans-serif;
    font-family: 'Bellota', cursive; 
     text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -webkit-animation: lighting 1s ease-in-out infinite alternate;
     animation: lighting 1s ease-in-out infinite alternate;
     box-shadow:  0 0 10px 10px rgba(192, 192, 212, 0.589);
 } */
@@ -72,8 +71,8 @@ body{
         margin: 120px;
         width:400px;
         height:400px;
-        box-shadow: 0 4px 8px 0 rgba(233, 14, 14, 0.4), 0 6px 20px 0 rgba(245, 9, 9, 0.4);
-        box-shadow: 15px 15px 5px grey;
+        box-shadow: 0 4px 8px 0 rgba(102, 89, 89, 0.466), 0 6px 20px 0 rgba(110, 99, 99, 0.4);
+        box-shadow: 15px 15px 5px rgba(90, 81, 81, 0.733);
         /* animation: lighting 1s ease-in-out infinite alternate; */
         /* margin-top: 100px; */
     }
@@ -184,7 +183,7 @@ transform: translateY(-50%) translateX(0px)  scale(1);
     }
     /*Style text*/
     .square-flip h2{
-        color:red;
+        color:rgb(0, 0, 0);
         font-family: "Open Sans";
         font-weight:700;
         font-size:22px;
@@ -229,13 +228,14 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         background-repeat: no-repeat;
     }
     .kallyas-button{
+        font-size: x-large;
         display:block;
         width:160px;
         padding:18px 30px;
         font-family:"Open Sans";
         font-weight:600;
-        color:#fff;
-        background:#FF2024;
+        color:rgb(255, 255, 255);
+        background:rgb(0, 0, 0);
         margin:0 auto;
         border-radius:2px;
         text-decoration:none;
@@ -243,53 +243,87 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         background: #ffa067; /* Old browsers */
         background: -moz-linear-gradient(-45deg,  #ffa067 0%, #ff2959 49%, #ff2024 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(-45deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(135deg,  #756861 0%,#494243 49%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa067', endColorstr='#ff2024',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
   
 .textdiv h2{
-    background-color:rgb(172, 130, 130);
+    background-color:rgb(255, 255, 255);
     width: 75%;
-    animation: lighting 1s ease-in-out infinite alternate;
+    animation: lighting 2s ease-in-out infinite alternate;
     text-align: center;
+    padding: 5px;
 }
 footer{
     margin-top: 1300px;
-    border: 10px solid beige;
+    /* border: 10px solid; */
     /* text-align: center; */
 }
-article section div h2{
-    font-size: 50px;
-    font-weight: 900;
-    display: inline-block;
-    color: red;
+article {
     text-align: center;
-    animation: lighting 1s ease-in-out infinite alternate;
-    box-shadow: skyblue;
-    /* border: solid 5px; */
-    margin-left: 40%;
 }
-article section div p{
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+article section div img{
+    font-family: 'Jacques Francois Shadow', cursive;
+    width: 400px;
+    height: 250px;
+    margin: 100px 20px auto;
+    /* text-align: center; */
+    /* z-index: -1; */
+    /* background-repeat: no-repeat;
+    /* background-image: url('http://lalesaray.com.tr/wp-content/uploads/2017/11/our-vision.jpg'); */
+    /* background-size: cover;
+    animation: lighting 2s ease-in-out infinite alternate; */ 
+    /* box-shadow: skyblue; */
+    /* border: solid 5px red; */
+    /* margin-left: 40%; */
+}
+/* article section div{
+    border: 10px solid red;
+} */
+article section div h2{
+    /* font-family: 'Spectral', serif; */
+    /* text-shadow: -1px 0 rgba(24, 22, 22, 0.849), 0 1px rgb(20, 19, 19), 1px 0 rgb(14, 13, 13), 0 -1px rgb(27, 26, 26); */
     /* border: red solid 5px; */
-    color: black;
+    color: rgba(0, 0, 0, 1);
     text-align: center;
     font-size: xx-large;
     font-weight: 900;
+    /* top: 50px; */
+    margin: 10px;
+    font-family: 'Fredoka One', cursive;
 
+}
+article section div p{
+    /* font-family: 'Spectral', serif; */
+    /* text-shadow: -1px 0 rgba(24, 22, 22, 0.849), 0 1px rgb(20, 19, 19), 1px 0 rgb(14, 13, 13), 0 -1px rgb(27, 26, 26); */
+    /* border: red solid 5px; */
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    /* top: 50px; */
+    margin: 10px;
+    font-family: 'Nothing You Could Do', cursive;
+    text-align: justify;
+
+}
+#vision-div{
+    width: 70%;
+    margin: 30px auto;
 }
 .bio{
     font-size: x-large;
     color: black;
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    margin: 15px;
+    /* text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), 0 -1px rgb(0, 0, 0); */
 
 }
 /* div .footer-section1-map{
     display: inline-block;
 } */
 
-main{
+/* main{
     border: beige solid 10px;
-}
+} */
 
 /* <!--------------------- Ibrahim-End--------------------------> */

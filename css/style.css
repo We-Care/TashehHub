@@ -1,44 +1,285 @@
+#inOutUp,#exploreEventsButton,#followedEventsButton,#myEventsButton{
+	float: right;
+}
 
-iframe{
-    /* border: red solid 5px; */
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    margin-left: 300px;
-    box-shadow: 15px 15px gray;
-}
-.social{
-display: inline-block;
-height: 50px;
-width: 50px;
-}
-.img1{
-    display: inline-block;
-    width: 200px;
-    height: 150px;
-    margin-left: 150px;
-    /* margin-right: 100px; */
-}
-div .footer-section1-map{
-    display: inline-block;
+   body,
+   html {
+	   height: 100%
+   }
 
+   body,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+	   font-family: "Amatic SC", sans-serif
+   }
+
+   .menu {
+	   display: none
+   }
+
+   header.bgimg {
+	   background-repeat: no-repeat;
+	   background-size: cover;
+	   background-image: url("https://static.vecteezy.com/system/resources/previews/000/671/603/non_2x/set-of-young-diverse-men-with-smartphones-vector.jpg");
+	   min-height: 90%;
+   }
+.w3-top {
+    top: 0;
 }
-.footer-section1{
+.w3-top, .w3-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+.w3-black, .w3-hover-black:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+.w3-xlarge {
+    font-size: 24px !important;
+}
+.w3-opacity, .w3-hover-opacity:hover {
+    opacity: 0.60;
+}
+.w3-bar {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+.w3-bar .w3-button {
+    white-space: normal;
+}
+.w3-bar .w3-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+.w3-btn, .w3-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.w3-btn, .w3-button {
+    border: none;
     display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
 }
-.footer-bottom{
-    padding: 20px;
-    color: black;
+a {
+    color: inherit;
+}
+a {
+    background-color: transparent;
+}
+
+.w3-black, .w3-hover-black:hover {
+    color: #fff !important;
+}
+
+
+
+
+
+.w3-greyscale-min, .w3-grayscale-min {
+    filter: grayscale(50%);
+}
+.w3-tooltip, .w3-display-container {
+    position: relative;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+
+
+html, body {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.w3-padding {
+    padding: 8px 16px !important;
+}
+.w3-display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+
+.w3-badge, .w3-tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
     text-align: center;
 }
-.find{
-    margin-bottom: 10px;
-    font-size: xx-large;
-    color: black;
-    margin-left: 150px;
+
+
+
+.w3-center {
+    text-align: center !important;
 }
-	/* <!--------------------- Ahmad-Start-------------------------->  */
+.w3-display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+
+
+
+element {
+	font-size: 100px;
+}
+.w3-text-white, .w3-hover-text-white:hover {
+	color: #fff !important;
+	background-color: #80808078;
+	
+}
+
+
+
+element {
+    font-size: 60px;
+}
+
+.w3-hide-large {
+    display: none !important;
+}
+
+
+
+.w3-xxlarge {
+    font-size: 36px !important;
+}
+
+
+
+
+
+
+
+.w3-padding-48 {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+
+
+
+.w3-bar-item:hover{
+    background-color: lightgray;
+    opacity: 0.8;
+}
+
+
+
+
+/* <!--------------------- ibrahim-start-footer-------------------------->  */
+
+footer {
+	padding: 20px;
+	color: white;
+	background-color: rgba(26, 23, 23, 0.842);
+}
+
+iframe {
+	/* border: red solid 5px; */
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	margin-left: 300px;
+	box-shadow: 15px 15px rgba(59, 53, 53, 0.158);
+}
+
+.social {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+}
+
+.img1 {
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+	margin-left: 150px;
+	/* margin-right: 100px; */
+}
+
+div .footer-section1-map {
+	display: inline-block;
+}
+
+.footer-section1 {
+	display: inline-block;
+	font-size: large;
+	/* font-size: xx-large; */
+	margin: 10px;
+	/* background-color: rgba(26, 23, 23, 0.7); */
+	/* margin-bottom: 10px; */
+}
+
+.footer-bottom {
+	padding: 20px;
+	/* background-color: white; */
+	color: rgb(255, 255, 255);
+	text-align: center;
+	background-color: rgba(0, 0, 0);
+}
+
+.find {
+	margin-bottom: 10px;
+	font-size: xx-large;
+	color: rgb(255, 255, 255);
+	margin-left: 150px;
+}
+
+.footh1 {
+	font-size: xx-large;
+	margin: 10px;
+}
+
+/* <!--------------------- ibrahim-End-footer-------------------------->  */
+
+/* <!--------------------- Ahmad-Start-------------------------->  */
+
+
+/* sign style */
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
@@ -47,6 +288,7 @@ div .footer-section1-map{
 }
 
 .container {
+    position: sticky;
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -56,10 +298,9 @@ div .footer-section1-map{
 	height: 50vh;
     margin: -20px 0 50px;
     
-    left: 50vh;
-    top: 20vh;
+    left: 52vh;
+    top: -60vh;
    
-
 }
 
 .container h1 {
@@ -84,8 +325,8 @@ div .footer-section1-map{
 
 .container button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #000000;
+	background-color: #000000;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -145,7 +386,19 @@ div .footer-section1-map{
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
+.overlay-left button{
+    margin-top: 55px;
+}
+.overlay-left p{
+    padding-top: 30px;
+}
+.overlay-right p{
+    padding-top: 15px;
 
+}
+.overlay-right button{
+    margin-top: 15px;
+}
 .sign-in-container {
 	left: 0;
 	width: 50%;
@@ -198,9 +451,9 @@ div .footer-section1-map{
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: #000000;
+	background: -webkit-linear-gradient(to right,#484848, #000000);
+	background: linear-gradient(to right, #484848, #000000);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -249,11 +502,84 @@ div .footer-section1-map{
 	transform: translateX(20%);
 }
 .upperDivClass{
-	position: absolute;
-    background-color: white;
+    position: fixed;
+    background-color: rgb(34, 31, 31);
     opacity: 0.5;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
 }
+
+
+/* sign style */
+
+/* <!--------------------- Ahmad-End-------------------------->  */
+
+/* <!--------------------- Ahmad-start-------------------------->  */
+
+main nav ul {
+	position: absolute;
+	margin: 2% 30% 5% 45%;
+	z-index: 2;
+}
+
+main nav ul li {
+	display: inline-block;
+}
+
+main nav a {
+	font-size: larger;
+	font-weight: bold;
+	color: tomato;
+	margin: 0 5px;
+}
+
+main nav a:hover {
+	font-size: x-large;
+	font-weight: bolder;
+	color: red;
+}
+
+.leftImgFirstSlide {
+	position: fixed;
+	width: 50%;
+	height: 50%;
+	float: left;
+	background-image: linear-gradient(to right, transparent, mistyrose), url("https://img.freepik.com/free-vector/people-celebrating-holi-festival_23-2148423466.jpg?size=626&ext=jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.rightImgFirstSlide {
+	width: 50%;
+	float: right;
+	background: linear-gradient(to left, transparent, white), url("	https://elements-cover-images-0.imgix.net/97972b39-fef7-45dd-b4ca-65c95196f5f1?auto=compress%2Cformat&fit=max&w=1370&s=ba09ebb7399ea0fc845fd24775780189");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.leftImgSecSlide {
+	position: fixed;
+	width: 50%;
+	height: 50%;
+	float: left;
+	background-image: linear-gradient(to right, transparent, mistyrose), url("https://img.freepik.com/free-vector/people-celebrating-holi-festival_23-2148423466.jpg?size=626&ext=jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.rightImgSecSlide {
+	width: 50%;
+	float: right;
+	background: linear-gradient(to left, transparent, mistyrose), url("	https://elements-cover-images-0.imgix.net/97972b39-fef7-45dd-b4ca-65c95196f5f1?auto=compress%2Cformat&fit=max&w=1370&s=ba09ebb7399ea0fc845fd24775780189");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 /* <!--------------------- Ahmad-End-------------------------->  */

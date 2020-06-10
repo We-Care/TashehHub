@@ -1,4 +1,10 @@
-
+if (localStorage.currUserID) {
+    logout();
+} else {
+    document.getElementById('eventsButtonHome').style.display='none';
+        // document.getElementById('eventsButtonAbout').style.display='none';
+    loginSignup();
+}
 document.getElementById('myEventsButton').addEventListener('click', myEventsButtonHandler);
 function myEventsButtonHandler(event) {
     let currUser = JSON.parse(localStorage.getItem(localStorage.getItem('currUserID')));
@@ -15,6 +21,7 @@ function followedEventsButtonHandler(event) {
     followedEventsRender(currUser);
 }
 document.getElementById('createEventForm').addEventListener('submit', handleEventForm);
+exploreEventsButtonHandler();
 
 function handleEventForm(event) {
     let eventName = event.target.eventName.value;
@@ -66,47 +73,93 @@ function createEvent(currUser, eventName, description, imageURL, date, maxNumber
 
 
 function myEventsRender(currUser) {
-    document.getElementById('exploreEvents').innerHTML = "";
-    document.getElementById('followedEvents').innerHTML = "";
-    document.getElementById('myEvents').innerHTML = "";
+    document.getElementById('enventCards').innerHTML = "";
+    document.getElementById('followedEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    document.getElementById('exploreEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    // document.getElementById('followedEvents').innerHTML = "";
+    // document.getElementById('myEvents').innerHTML = "";
     for (let i in currUser.userEvents) {
         let currEventID = currUser.userEvents[i];
         let currEvent = JSON.parse(localStorage.getItem(currEventID));
-        let divE = document.getElementById('myEvents');
-        let figureE = document.createElement('figure');
-        divE.appendChild(figureE);
-        figureE.id = currEventID + 'FigureE';
-        let imgE = document.createElement('img');
-        figureE.appendChild(imgE);
-        imgE.src = currEvent.imageURL;
-        imgE.alt = 'No Image';
-        let h3E = document.createElement('h3');
-        figureE.appendChild(h3E);
-        h3E.innerText = currEvent.owner;
-        let pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.date;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.maxNumberOfPeople;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.description;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.requirements;
-        let buttonE = document.createElement('button');
-        figureE.appendChild(buttonE);
-        buttonE.innerText = 'Delete Eevent';
-        buttonE.id = currEventID;
-        buttonE.classList = 'deleteButton';
+        let divE = document.getElementById('enventCards');
+
+        let divE0 = document.createElement('div');
+        divE.appendChild(divE0);
+        divE0.id = currEventID + 'divE0';
+        divE0.classList='card';
+        divE0.style.backgroundImage=`url(${currEvent.imageURL})`;
+        let divE2 = document.createElement('ul');
+        divE0.appendChild(divE2);
+        divE2.classList='text-div-container';
+        
+        divE2.insertAdjacentHTML("afterbegin", `<dt>Event creator:</dt> <dd>${currEvent.eventName}
+        <dd>Description:</dd> <dt>${currEvent.description}</dt>
+        <dd>Requirements</dd> <dt>${currEvent.requirements}</dt>
+        <dd>Max number of people:</dd> <dt>${currEvent.maxNumberOfPeople}</dt>`);
+
+        let divE3 = document.createElement('div');
+        divE0.appendChild(divE3);
+        divE3.classList='date';
+        divE3.innerText= currEvent.date;
+
+        let divE4 = document.createElement('div');
+        divE0.appendChild(divE4);
+        divE4.classList='tags';
+
+        let divE5 = document.createElement('div');
+        divE4.appendChild(divE5);
+        divE5.classList='tag';
+        divE5.innerText='Yallah '+currEvent.eventName;
+
+        let divE6 = document.createElement('div');
+        divE4.appendChild(divE6);
+        divE6.classList='deleteButton tag-button';
+        divE6.innerText='Delete Eevent';
+        divE6.id =currEventID;
+
+        // let currEventID = currUser.userEvents[i];
+        // let currEvent = JSON.parse(localStorage.getItem(currEventID));
+        // let divE = document.getElementById('myEvents');
+        // let figureE = document.createElement('figure');
+        // divE.appendChild(figureE);
+        // figureE.id = currEventID + 'FigureE';
+        // let imgE = document.createElement('img');
+        // figureE.appendChild(imgE);
+        // imgE.src = currEvent.imageURL;
+        // imgE.alt = 'No Image';
+        // let h3E = document.createElement('h3');
+        // figureE.appendChild(h3E);
+        // h3E.innerText = currEvent.owner;
+        // let pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.date;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.maxNumberOfPeople;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.description;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.requirements;
+        // let buttonE = document.createElement('button');
+        // figureE.appendChild(buttonE);
+        // buttonE.innerText = 'Delete Eevent';
+        // buttonE.id = currEventID;
+        // buttonE.classList = 'deleteButton';
     }
+    document.getElementById('myEventsButton').classList=' w3-bar-item w3-button activeEventPagebutton';
     activateDeleteButton(currUser);
 }
 function exploreEventsRender(currUser) {
-    document.getElementById('exploreEvents').innerHTML = "";
-    document.getElementById('followedEvents').innerHTML = "";
-    document.getElementById('myEvents').innerHTML = "";
+    document.getElementById('enventCards').innerHTML = "";
+    document.getElementById('followedEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    document.getElementById('myEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+
+
+
+    // document.getElementById('followedEvents').innerHTML = "";
+    // document.getElementById('myEvents').innerHTML = "";
 
     let totalNumberOfUsers = localStorage.getItem('totalNumberOfUsers');
     let arrayEvents = [];
@@ -128,73 +181,144 @@ function exploreEventsRender(currUser) {
     for (let i in arrayEvents) {
         let currEventID = arrayEvents[i];
         let currEvent = JSON.parse(localStorage.getItem(currEventID));
-        let divE = document.getElementById('myEvents');
-        let figureE = document.createElement('figure');
-        divE.appendChild(figureE);
-        figureE.id = currEventID + 'FigureE';
-        let imgE = document.createElement('img');
-        figureE.appendChild(imgE);
-        imgE.src = currEvent.imageURL;
-        imgE.alt = 'No Image';
-        let h3E = document.createElement('h3');
-        figureE.appendChild(h3E);
-        h3E.innerText = currEvent.owner;
-        let pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.date;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.maxNumberOfPeople;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.description;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.requirements;
-        let buttonE = document.createElement('button');
-        figureE.appendChild(buttonE);
-        buttonE.innerText = 'Join';
-        buttonE.id = currEventID;
-        buttonE.classList = 'joinButton';
+        let divE = document.getElementById('enventCards');
+        let divE0 = document.createElement('div');
+        divE.appendChild(divE0);
+        divE0.id = currEventID + 'divE0';
+        divE0.classList='card';
+        divE0.style.backgroundImage=`url(${currEvent.imageURL})`;
+        let divE2 = document.createElement('div');
+        divE0.appendChild(divE2);
+        divE2.classList='text-div-container';
+        
+        divE2.insertAdjacentHTML("afterbegin", `<dt>Event creator:</dt> <dd>${currEvent.eventName}
+        <dd>Description:</dd> <dt>${currEvent.description}</dt>
+        <dd>Requirements</dd> <dt>${currEvent.requirements}</dt>
+        <dd>Max number of people:</dd> <dt>${currEvent.maxNumberOfPeople}</dt>`);
+
+        let divE3 = document.createElement('div');
+        divE0.appendChild(divE3);
+        divE3.classList='date';
+        divE3.innerText= currEvent.date;
+
+        let divE4 = document.createElement('div');
+        divE0.appendChild(divE4);
+        divE4.classList='tags';
+
+        let divE5 = document.createElement('div');
+        divE4.appendChild(divE5);
+        divE5.classList='tag';
+        divE5.innerText='Yallah '+currEvent.eventName;
+
+        let divE6 = document.createElement('div');
+        divE4.appendChild(divE6);
+        divE6.classList='joinButton tag-button';
+        divE6.innerText='Join';
+        divE6.id = currEvent.eventID;
+        // let pE = document.createElement('p');
+        // divE0.appendChild(pE);
+        // pE.innerText = currEvent.date;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.maxNumberOfPeople;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.description;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.requirements;
+        // let buttonE = document.createElement('button');
+        // figureE.appendChild(buttonE);
+        // buttonE.innerText = 'Join';
+        // buttonE.id = currEventID;
+        // buttonE.classList = 'joinButton';
     }
+
+    // document.getElementById('exploreEventsButton').classList.remove('activeEventPagebutton');
+    // document.getElementById('followedEventsButton').classList.remove
+    document.getElementById('exploreEventsButton').classList='activeEventPagebutton w3-bar-item w3-button ';
     activateJoinButton(currUser, arrayEvents);
 
 }
 function followedEventsRender(currUser) {
-    document.getElementById('exploreEvents').innerHTML = "";
-    document.getElementById('followedEvents').innerHTML = "";
-    document.getElementById('myEvents').innerHTML = ""; for (let i in currUser.followedEvents) {
+    document.getElementById('enventCards').innerHTML = "";
+    document.getElementById('exploreEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    document.getElementById('myEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+
+    // document.getElementById('followedEvents').innerHTML = "";
+    // document.getElementById('myEvents').innerHTML = ""; 
+    for (let i in currUser.followedEvents) {
         let currEventID = currUser.followedEvents[i];
         let currEvent = JSON.parse(localStorage.getItem(currEventID));
-        let divE = document.getElementById('myEvents');
-        let figureE = document.createElement('figure');
-        divE.appendChild(figureE);
-        figureE.id = currEventID + 'FigureE';
-        let imgE = document.createElement('img');
-        figureE.appendChild(imgE);
-        imgE.src = currEvent.imageURL;
-        imgE.alt = 'No Image';
-        let h3E = document.createElement('h3');
-        figureE.appendChild(h3E);
-        h3E.innerText = currEvent.owner;
-        let pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.date;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.maxNumberOfPeople;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.description;
-        pE = document.createElement('p');
-        figureE.appendChild(pE);
-        pE.innerText = currEvent.requirements;
-        let buttonE = document.createElement('button');
-        figureE.appendChild(buttonE);
-        buttonE.innerText = 'Unjoin';
-        buttonE.id = currEventID;
-        buttonE.classList = 'unjoinButton';
+        let divE = document.getElementById('enventCards');
+
+        let divE0 = document.createElement('div');
+        divE.appendChild(divE0);
+        divE0.id = currEventID + 'divE0';
+        divE0.classList='card';
+        divE0.style.backgroundImage=`url(${currEvent.imageURL})`;
+        let divE2 = document.createElement('ul');
+        divE0.appendChild(divE2);
+        divE2.classList='text-div-container';
+        
+        divE2.insertAdjacentHTML("afterbegin", `<dt>Event creator:</dt> <dd>${currEvent.eventName}
+        <dd>Description:</dd> <dt>${currEvent.description}</dt>
+        <dd>Requirements</dd> <dt>${currEvent.requirements}</dt>
+        <dd>Max number of people:</dd> <dt>${currEvent.maxNumberOfPeople}</dt>`);
+
+        let divE3 = document.createElement('div');
+        divE0.appendChild(divE3);
+        divE3.classList='date';
+        divE3.innerText= currEvent.date;
+
+        let divE4 = document.createElement('div');
+        divE0.appendChild(divE4);
+        divE4.classList='tags';
+
+        let divE5 = document.createElement('div');
+        divE4.appendChild(divE5);
+        divE5.classList='tag';
+        divE5.innerText='Yallah '+currEvent.eventName;
+
+        let divE6 = document.createElement('div');
+        divE4.appendChild(divE6);
+        divE6.classList='unjoinButton tag-button';
+        divE6.innerText='Unjoin';
+        divE6.id =currEventID;
+
+
+        // let currEventID = currUser.followedEvents[i];
+        // let currEvent = JSON.parse(localStorage.getItem(currEventID));
+        // let divE = document.getElementById('myEvents');
+        // let figureE = document.createElement('figure');
+        // divE.appendChild(figureE);
+        // figureE.id = currEventID + 'FigureE';
+        // let imgE = document.createElement('img');
+        // figureE.appendChild(imgE);
+        // imgE.src = currEvent.imageURL;
+        // imgE.alt = 'No Image';
+        // let h3E = document.createElement('h3');
+        // figureE.appendChild(h3E);
+        // h3E.innerText = currEvent.owner;
+        // let pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.date;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.maxNumberOfPeople;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.description;
+        // pE = document.createElement('p');
+        // figureE.appendChild(pE);
+        // pE.innerText = currEvent.requirements;
+        // let buttonE = document.createElement('button');
+        // figureE.appendChild(buttonE);
+        // buttonE.innerText = 'Unjoin';
+        // buttonE.id = currEventID;
+        // buttonE.classList = 'unjoinButton';
     }
+    document.getElementById('followedEventsButton').classList=' activeEventPagebutton w3-bar-item w3-button  ';
     activateUnjoinButton(currUser);
 
 }
@@ -220,7 +344,7 @@ function handleDeleteEvent(event) {
         let indexFollowedEvents = currUser.userEvents.indexOf(currEventID);
         currUser.userEvents.splice(indexFollowedEvents, 1);
         localStorage.setItem(currUser.userID, JSON.stringify(currUser));
-        document.getElementById(currEventID + 'FigureE').style = 'display:none';
+        document.getElementById(currEventID + 'divE0').style = 'display:none';
     }
 }
 function shuffle(array) {
@@ -250,7 +374,7 @@ function activateJoinButton(currUser, arrayEvents) {
 
         let currEventID = event.target.id;
         followEvent(currEventID);
-        document.getElementById(currEventID + 'FigureE').style = 'display:none';
+        document.getElementById(currEventID + 'divE0').style = 'display:none';
     }
 }
 function unFollowEvent(currEvent) {
@@ -275,7 +399,7 @@ function activateUnjoinButton(currUser) {
         let currEvent = JSON.parse(localStorage.getItem(currEventID));
         console.log(currEvent);
         unFollowEvent(currEvent);
-        document.getElementById(currEventID + 'FigureE').style = 'display:none';
+        document.getElementById(currEventID + 'divE0').style = 'display:none';
     }
 }
 
@@ -283,18 +407,18 @@ function activateUnjoinButton(currUser) {
 // <!--------------------- Ahmad-Start--------------------------> 
 
 
-//// event popupfunction blurEventsPage(){
-var elements = document.getElementById('events-div');
-document.getElementById('createEventBtn').addEventListener('click', displayCreateEventForm);
-function displayCreateEventForm() {
-    elements.classList = 'upperDivClass';
-    elements.style.filter = 'blur(20px)';
-    document.getElementById("createEventForm").style.display = "block";
-    blurEventsPage();
-} var eventclickBlured = document.getElementById('events-div');
-eventclickBlured.addEventListener('click', function () {
-    eventclickBlured.classList.remove("upperDivClass");
-    document.getElementById("createEventForm").style.display = "none";
-})
+//  event popup
 
-// <!--------------------- Ahmad-End--------------------------> 
+ 
+//// event popupfunction blurEventsPage(){
+    var elements = document.getElementById('events-div');
+    document.getElementById('createEventBtn').addEventListener('click', displayCreateEventForm);
+    function displayCreateEventForm() {
+        elements.classList = 'upperDivClass';
+        elements.style.filter = 'blur(20px)';
+        document.getElementById("createEventForm").style.display = "block";
+        // blurEventsPage();
+    } var eventclickBlured = document.getElementById('events-div');eventclickBlured.addEventListener('click', function () {
+        eventclickBlured.classList.remove("upperDivClass");
+        document.getElementById("createEventForm").style.display = "none";
+    })

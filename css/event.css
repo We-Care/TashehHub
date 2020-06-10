@@ -1,7 +1,18 @@
+.activeEventPagebutton{
+	background-color: #a400fc;
+	padding: 8px 16px;
+
+}
+.unActiveEventPagebutton{
+	padding: 8px 16px;
+}
+main{
+	min-height: 500px;
+}
 /* <!--------------------- Ahmad-Start-------------------------->  */
 
 /* form styling for events */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');* {
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');* {
     box-sizing: border-box;
 }
 #createEventForm{
@@ -47,7 +58,7 @@
     text-align: center;
     /* width: 100%;
     height: 100%; */
-}#createEventForm input {
+#createEventForm input {
     background-color: #eee;
     border: none;
     padding: 12px 15px;
@@ -64,5 +75,195 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-}
+} 
 /* <!--------------------- Ahmad-Start-------------------------->  */
+
+
+
+
+/* <!--------------------- Osama-Start for events Cards -------------------------->  */
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+:root {
+	--color: #3c3163;
+	--transition-time: 0.5s;
+}
+
+/* * {
+  
+} */
+
+
+
+.card {
+	color: inherit;
+	margin-right: 30px;
+}
+
+/* .cards-wrapper {
+	width: 500px;
+	
+} */
+
+.event-cards {
+	text-align: center;
+}
+
+.text-div-container {
+	opacity: 0;
+font-size: small;
+height:200px;
+	width: 100%;
+	text-align: left;
+}
+
+.card:hover .text-div-container {
+	opacity: 1;
+	width: 100%;
+}
+.card {
+	font-family:fantasy;
+	--bg-filter-opacity: 0.1;
+	background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+	height: 12em;
+	width: 9.1em;
+	font-size: 1.5em;
+	color: white;
+	border-radius: 1em;
+	padding: 1em;
+	/*margin: 2em;*/
+	display: inline-block;
+	align-items: inline-block-end;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 5em -2em black;
+	transition: all, var(--transition-time);
+	position: relative;
+	overflow: hidden;
+	border: 10px solid #80005e;
+	text-decoration: none;
+}
+
+.card:hover {
+	transform: rotate(0);
+	width: 500px;
+}
+
+.card h1 {
+	font-size: 1.5em;
+	margin: 0;
+	font-family:'Titan One', cursive;;
+}
+
+.card p {
+	font-size: 0.75em;
+	font-family: 'Open Sans';
+	margin-top: 0.5em;
+	line-height: 2em;
+}
+
+.card .tags {
+	text-align: center;
+	display: inline-block;
+}
+
+.card .tags .tag,.card .tags .tag-button {
+	font-size: 0.75em;
+	background: #80005e;
+	border-radius: 0.3rem;
+	padding: 0 0.5em;
+	margin-right: 0.5em;
+	line-height: 1.5em;
+	text-align: center;
+	transition: all, var(--transition-time);
+	width: 189px;
+	display: inline-block;
+}
+.card .tags .tag-button {
+	display: none;
+}
+.tag-button:hover,.unjoinButton:hover{
+    color:  #3c3163;
+}
+.card:hover .tags .tag {
+	display: none;
+	background: var(--color);
+	color: white;
+}
+.card:hover .tag-button{
+	background: black;
+	color: white;
+    display: inline-block;
+    z-index: 2;
+}
+.card .date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.75em;
+	padding: 1em;
+	line-height: 1em;
+	color: #3c3163;
+	display: none;
+}
+
+.card:before, .card:after {
+	content: '';
+	transform: scale(0);
+	transform-origin: top left;
+	border-radius: 50%;
+	position: absolute;
+	left: -50%;
+	top: -50%;
+	z-index: -5;
+	transition: all, var(--transition-time);
+	transition-timing-function: ease-in-out;
+}
+
+.card:before {
+	background: #ddd;
+	width: 250%;
+	height: 250%;
+}
+
+.card:after {
+	background: white;
+	width: 200%;
+	height: 200%;
+}
+
+.card:hover {
+	color: var(--color);
+}
+
+.card:hover:before, .card:hover:after {
+	transform: scale(1);
+}
+.card:hover .date{
+display: grid;
+}
+.card-grid-space .num {
+	font-size: 3em;
+	margin-bottom: 1.2rem;
+	margin-left: 1rem;
+}
+
+.info {
+	font-size: 1.2em;
+	display: inline-block;
+	padding: 1em 3em;
+	height: 3em;
+}
+
+.info img {
+	height: 3em;
+	margin-right: 0.5em;
+}
+
+.info h1 {
+	font-size: 1em;
+	font-weight: normal;
+}
+.tags h1{
+	text-shadow: 1px 0 0 #b81496, -1px 0 0 #b81496, 0 1px 0 #b81496, 0 -1px 0 #b81496, 1px 1px #b81496, -1px -1px 0 #b81496, 1px -1px 0 #b81496, -1px 1px 0 #b81496;
+}
+/* <!--------------------- Osama-End for events Cards -------------------------->  */
