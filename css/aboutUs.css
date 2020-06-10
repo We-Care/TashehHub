@@ -68,7 +68,8 @@ font-family: 'Nothing You Could Do', cursive; */
     margin:20px;
     }
     .square-flip{
-        margin: 120px;
+        margin: 120px 170px;
+        /* margin-left: 150px; */
         width:400px;
         height:400px;
         box-shadow: 0 4px 8px 0 rgba(102, 89, 89, 0.466), 0 6px 20px 0 rgba(110, 99, 99, 0.4);
@@ -235,15 +236,15 @@ transform: translateY(-50%) translateX(0px)  scale(1);
         font-family:"Open Sans";
         font-weight:600;
         color:rgb(255, 255, 255);
-        background:rgb(0, 0, 0);
+        /* background:rgb(0, 0, 0); */
         margin:0 auto;
         border-radius:2px;
         text-decoration:none;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa067+0,ff2959+49,ff2024+100 */
-        background: #ffa067; /* Old browsers */
-        background: -moz-linear-gradient(-45deg,  #ffa067 0%, #ff2959 49%, #ff2024 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg,  #756861 0%,#494243 49%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        /* background: #ffa067; Old browsers */
+        /* background: -moz-linear-gradient(-45deg,  #ffa067 0%, #ff2959 49%, #ff2024 100%); FF3.6-15 */
+        /* background: -webkit-linear-gradient(-45deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); Chrome10-25,Safari5.1-6 */
+        /* background: linear-gradient(135deg,  #756861 0%,#494243 49%,#000000 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa067', endColorstr='#ff2024',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
   
@@ -312,7 +313,7 @@ article section div p{
     margin: 30px auto;
 }
 .bio{
-    font-size: x-large;
+    font-size: large;
     color: black;
     margin: 15px;
     /* text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), 0 -1px rgb(0, 0, 0); */
