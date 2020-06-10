@@ -1,3 +1,11 @@
+.activeEventPagebutton{
+	background-color: #a400fc;
+	padding: 8px 16px;
+
+}
+.unActiveEventPagebutton{
+	padding: 8px 16px;
+}
 main{
 	min-height: 500px;
 }

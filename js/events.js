@@ -5,7 +5,6 @@ if (localStorage.currUserID) {
         // document.getElementById('eventsButtonAbout').style.display='none';
     loginSignup();
 }
-
 document.getElementById('myEventsButton').addEventListener('click', myEventsButtonHandler);
 function myEventsButtonHandler(event) {
     let currUser = JSON.parse(localStorage.getItem(localStorage.getItem('currUserID')));
@@ -22,6 +21,7 @@ function followedEventsButtonHandler(event) {
     followedEventsRender(currUser);
 }
 document.getElementById('createEventForm').addEventListener('submit', handleEventForm);
+exploreEventsButtonHandler();
 
 function handleEventForm(event) {
     let eventName = event.target.eventName.value;
@@ -74,6 +74,8 @@ function createEvent(currUser, eventName, description, imageURL, date, maxNumber
 
 function myEventsRender(currUser) {
     document.getElementById('enventCards').innerHTML = "";
+    document.getElementById('followedEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    document.getElementById('exploreEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
     // document.getElementById('followedEvents').innerHTML = "";
     // document.getElementById('myEvents').innerHTML = "";
     for (let i in currUser.userEvents) {
@@ -146,10 +148,16 @@ function myEventsRender(currUser) {
         // buttonE.id = currEventID;
         // buttonE.classList = 'deleteButton';
     }
+    document.getElementById('myEventsButton').classList=' w3-bar-item w3-button activeEventPagebutton';
     activateDeleteButton(currUser);
 }
 function exploreEventsRender(currUser) {
     document.getElementById('enventCards').innerHTML = "";
+    document.getElementById('followedEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    document.getElementById('myEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+
+
+
     // document.getElementById('followedEvents').innerHTML = "";
     // document.getElementById('myEvents').innerHTML = "";
 
@@ -225,11 +233,18 @@ function exploreEventsRender(currUser) {
         // buttonE.id = currEventID;
         // buttonE.classList = 'joinButton';
     }
+
+    // document.getElementById('exploreEventsButton').classList.remove('activeEventPagebutton');
+    // document.getElementById('followedEventsButton').classList.remove
+    document.getElementById('exploreEventsButton').classList='activeEventPagebutton w3-bar-item w3-button ';
     activateJoinButton(currUser, arrayEvents);
 
 }
 function followedEventsRender(currUser) {
     document.getElementById('enventCards').innerHTML = "";
+    document.getElementById('exploreEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+    document.getElementById('myEventsButton').classList='unActiveEventPagebutton w3-bar-item w3-button ';
+
     // document.getElementById('followedEvents').innerHTML = "";
     // document.getElementById('myEvents').innerHTML = ""; 
     for (let i in currUser.followedEvents) {
@@ -303,6 +318,7 @@ function followedEventsRender(currUser) {
         // buttonE.id = currEventID;
         // buttonE.classList = 'unjoinButton';
     }
+    document.getElementById('followedEventsButton').classList=' activeEventPagebutton w3-bar-item w3-button  ';
     activateUnjoinButton(currUser);
 
 }

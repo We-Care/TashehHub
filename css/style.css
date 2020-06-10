@@ -1,3 +1,6 @@
+#inOutUp,#exploreEventsButton,#followedEventsButton,#myEventsButton{
+	float: right;
+}
 
    body,
    html {
@@ -159,10 +162,12 @@ html, body {
 
 
 element {
-    font-size: 100px;
+	font-size: 100px;
 }
 .w3-text-white, .w3-hover-text-white:hover {
-    color: #fff !important;
+	color: #fff !important;
+	background-color: #80808078;
+	
 }
 
 
