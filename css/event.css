@@ -1,7 +1,11 @@
 .activeEventPagebutton{
 	background-color: #a400fc;
-	padding: 8px 16px;
 
+}
+#enventCards{
+	width: 80%;
+	margin: 50px auto;
+	padding: 0;
 }
 .unActiveEventPagebutton{
 	padding: 8px 16px;
@@ -96,7 +100,8 @@ main{
 
 .card {
 	color: inherit;
-	margin-right: 30px;
+	margin-right: 50px;
+	margin-top: 50px;
 }
 
 /* .cards-wrapper {
@@ -111,22 +116,31 @@ main{
 .text-div-container {
 	opacity: 0;
 font-size: small;
-height:200px;
+height: 333px;
 	width: 100%;
 	text-align: left;
 }
 
 .card:hover .text-div-container {
+height: 333px;;
 	opacity: 1;
 	width: 100%;
+}
+.card:hover .text-div-container dt{
+	font-size: x-large;
+	color:#a400fc ;
+}
+.card:hover .text-div-container dd{
+	font-size: 1.1rem;
+
 }
 .card {
 	font-family:fantasy;
 	--bg-filter-opacity: 0.1;
 	background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
-	height: 12em;
+	height: 15em;
 	width: 9.1em;
-	font-size: 1.5em;
+	font-size: 2em;
 	color: white;
 	border-radius: 1em;
 	padding: 1em;
@@ -139,13 +153,14 @@ height:200px;
 	transition: all, var(--transition-time);
 	position: relative;
 	overflow: hidden;
-	border: 10px solid #80005e;
+	border: 10px solid #A400FC !important;
 	text-decoration: none;
 }
 
 .card:hover {
 	transform: rotate(0);
-	width: 500px;
+	width: 400px;
+	border: 10px solid black;
 }
 
 .card h1 {
@@ -168,7 +183,7 @@ height:200px;
 
 .card .tags .tag,.card .tags .tag-button {
 	font-size: 0.75em;
-	background: #80005e;
+	background:#A400FC;
 	border-radius: 0.3rem;
 	padding: 0 0.5em;
 	margin-right: 0.5em;
@@ -182,12 +197,16 @@ height:200px;
 	display: none;
 }
 .tag-button:hover,.unjoinButton:hover{
-    color:  #3c3163;
+	background-color:  #BE5CF6 !important;
+	cursor: pointer;
 }
 .card:hover .tags .tag {
 	display: none;
 	background: var(--color);
 	color: white;
+}
+.tag{
+	font-size: 20px !important;
 }
 .card:hover .tag-button{
 	background: black;

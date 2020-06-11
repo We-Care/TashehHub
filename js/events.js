@@ -93,9 +93,9 @@ function myEventsRender(currUser) {
         divE2.classList='text-div-container';
         
         divE2.insertAdjacentHTML("afterbegin", `<dt>Event creator:</dt> <dd>${currEvent.eventName}
-        <dd>Description:</dd> <dt>${currEvent.description}</dt>
-        <dd>Requirements</dd> <dt>${currEvent.requirements}</dt>
-        <dd>Max number of people:</dd> <dt>${currEvent.maxNumberOfPeople}</dt>`);
+        <dt>Description:</dt> <dd>${currEvent.description}</dd>
+        <dt>Requirements</dt> <dd>${currEvent.requirements}</dd>
+        <dt>Max number of people:</dt> <dd>${currEvent.maxNumberOfPeople}</dd>`);
 
         let divE3 = document.createElement('div');
         divE0.appendChild(divE3);
@@ -192,9 +192,9 @@ function exploreEventsRender(currUser) {
         divE2.classList='text-div-container';
         
         divE2.insertAdjacentHTML("afterbegin", `<dt>Event creator:</dt> <dd>${currEvent.eventName}
-        <dd>Description:</dd> <dt>${currEvent.description}</dt>
-        <dd>Requirements</dd> <dt>${currEvent.requirements}</dt>
-        <dd>Max number of people:</dd> <dt>${currEvent.maxNumberOfPeople}</dt>`);
+        <dt>Description:</dt> <dd>${currEvent.description}</dd>
+        <dt>Requirements</dt> <dd>${currEvent.requirements}</d>
+        <dt>Max number of people:</dd> <dd>${currEvent.maxNumberOfPeople}</dd>`);
 
         let divE3 = document.createElement('div');
         divE0.appendChild(divE3);
@@ -262,9 +262,9 @@ function followedEventsRender(currUser) {
         divE2.classList='text-div-container';
         
         divE2.insertAdjacentHTML("afterbegin", `<dt>Event creator:</dt> <dd>${currEvent.eventName}
-        <dd>Description:</dd> <dt>${currEvent.description}</dt>
-        <dd>Requirements</dd> <dt>${currEvent.requirements}</dt>
-        <dd>Max number of people:</dd> <dt>${currEvent.maxNumberOfPeople}</dt>`);
+        <dt>Description:</dt> <dd>${currEvent.description}</dd>
+        <dt>Requirements</dt> <dd>${currEvent.requirements}</dd>
+        <dt>Max number of people:</dt> <dd>${currEvent.maxNumberOfPeople}</dd>`);
 
         let divE3 = document.createElement('div');
         divE0.appendChild(divE3);

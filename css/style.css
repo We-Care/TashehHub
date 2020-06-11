@@ -1,7 +1,18 @@
 #inOutUp,#exploreEventsButton,#followedEventsButton,#myEventsButton{
 	float: right;
 }
-
+#textLogoNav-p{
+	margin: 0;
+	height: 40px;
+	border-radius:15px ;
+	background-color: white;
+	padding: 5px;
+}
+#textLogoNav{
+	width: 150px;
+	border: 1px white;
+	margin: 2px;
+}
    body,
    html {
 	   height: 100%
@@ -20,11 +31,10 @@
    .menu {
 	   display: none
    }
-
    header.bgimg {
 	   background-repeat: no-repeat;
 	   background-size: cover;
-	   background-image: url("https://static.vecteezy.com/system/resources/previews/000/671/603/non_2x/set-of-young-diverse-men-with-smartphones-vector.jpg");
+	   background-image: url("/img/hmoePageImage.jpg");
 	   min-height: 90%;
    }
 .w3-top {
@@ -92,6 +102,9 @@ body, h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     white-space: nowrap;
 }
+.w3-button:hover{
+	background-color: #BE5CF6 !important;
+}
 a {
     color: inherit;
 }
@@ -155,9 +168,13 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	background-color: rgba(255, 255, 255, 0.726);;
+	height: 150px;
 }
-
+#w3-display-middlespan{
+	color: black	;
+}
 
 
 
@@ -165,8 +182,7 @@ element {
 	font-size: 100px;
 }
 .w3-text-white, .w3-hover-text-white:hover {
-	color: #fff !important;
-	background-color: #80808078;
+	color:black;
 	
 }
 
@@ -298,8 +314,8 @@ div .footer-section1-map {
 	height: 50vh;
     margin: -20px 0 50px;
     
-    left: 52vh;
-    top: -60vh;
+    left: 24%;
+    top: 20vh;
    
 }
 
@@ -346,7 +362,8 @@ div .footer-section1-map {
 
 .container button.ghost {
 	background-color: transparent;
-	border-color: #FFFFFF;
+	border: 2px solid #A400FC;
+
 }
 
 .container form {
@@ -373,7 +390,7 @@ div .footer-section1-map {
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
+	position: fixed;
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
@@ -502,14 +519,13 @@ div .footer-section1-map {
 	transform: translateX(20%);
 }
 .upperDivClass{
-    position: fixed;
-    background-color: rgb(34, 31, 31);
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
+	position: fixed;
+	background-color: rgb(34, 31, 31);
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
 }
 
 

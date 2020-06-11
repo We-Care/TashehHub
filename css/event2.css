@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');* {
     box-sizing: border-box;
 }
+
 .createEventFormClass {
     display: flex;
     justify-content: center;
@@ -24,10 +25,13 @@
     width: 70%;
     padding: 100px;
 }
-
+#createEventForm h1 {
+    margin-top: 20px;
+    font-weight: 800;
+}
  #createEventForm button {
     border-radius: 20px;
-	border: 1px solid #000;
+	border: 2px solid #A400FC;
 	background-color: #ffffff;
 	color: #000000;
 	font-size: 16px;
@@ -35,7 +39,9 @@
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+    transition: transform 80ms ease-in;
+    margin-top:15px ;
+    margin-bottom: 20px;
 }
 
 #createEventForm form {
@@ -47,10 +53,10 @@
 	padding: 0 50px;
 	color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
-
+    margin-top: 30px;
     text-align: center;
-    width: 30%;
-    height: 580px;
+    width: 450px;
+    height: 620px;
     
 }
 form legend{
