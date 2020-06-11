@@ -1,0 +1,147 @@
+#fullLogoHome{
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 50%;
+}
+#enventCards{
+    display: inline-block;
+    margin: 20px;
+}
+.card {
+	color: inherit;
+	margin-right: 30px;
+}
+
+.event-cards {
+	text-align: center;
+}
+
+.text-div-container {
+	opacity: 0;
+font-size: small;
+height: 333px;
+	width: 100%;
+	text-align: left;
+	overflow: auto;
+}
+
+
+.card {
+	font-family:fantasy;
+	--bg-filter-opacity: 0.1;
+	background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+	height: 15em;
+	width: 9.1em;
+	font-size: 2em;
+	color: white;
+	border-radius: 1em;
+	padding: 1em;
+	/*margin: 2em;*/
+	display: inline-block;
+	align-items: inline-block-end;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 5em -2em black;
+	transition: all, var(--transition-time);
+	position: relative;
+	overflow: hidden;
+	border: 10px solid #a400fc;
+	text-decoration: none;
+}
+
+.card:hover {
+	border: 10px solid black;
+}
+
+
+.card .tags {
+	text-align: center;
+	display: inline-block;
+}
+
+.card .tags .tag,.card .tags .tag-button {
+	font-size: 0.75em;
+	background:#A400FC;
+	border-radius: 0.3rem;
+	padding: 0 0.5em;
+	margin-right: 0.5em;
+	line-height: 1.5em;
+	text-align: center;
+	transition: all, var(--transition-time);
+	width: 189px;
+	display: inline-block;
+}
+.card .tags .tag-button {
+	display: none;
+}
+/* .tag-button:hover,.unjoinButton:hover{
+	background-color:  #BE5CF6 !important;
+	cursor: pointer;
+} */
+.card:hover .tags .tag {
+	display: none;
+	background: red;
+    color: white;
+}
+
+.card:hover .tag-button{
+	background: black;
+	color: white;
+    display: inline-block;
+    z-index: 2;
+}
+.card .date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.75em;
+	padding: 1em;
+	line-height: 1em;
+	color: #3c3163;
+	display: none;
+}
+
+.card:before, .card:after {
+	content: '';
+	transform: scale(0);
+	transform-origin: top left;
+	border-radius: 50%;
+	position: absolute;
+	left: -50%;
+	top: -50%;
+	z-index: -5;
+	transition: all, var(--transition-time);
+	transition-timing-function: ease-in-out;
+}
+
+.card:before {
+	background: #ddd;
+	width: 250%;
+	height: 250%;
+}
+
+.card:after {
+	background: white;
+	width: 200%;
+	height: 200%;
+}
+
+.card:hover {
+    color: var(--color);
+    width: 350px;
+    transition: 1s;
+}
+
+.card:hover:before, .card:hover:after {
+	transform: scale(1);
+}
+.card-grid-space .num {
+	font-size: 3em;
+	margin-bottom: 1.2rem;
+	margin-left: 1rem;
+}
+#cards-section{
+    width: 80%;
+    text-align: center;
+    margin: 52px auto;
+}
